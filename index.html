@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+      function appendResults(text) {
+        var results = document.getElementById('results');
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(text));
+      }
+
+      function makeRequest() {
+        var request = gapi.client.urlshortener.url.insert({
+          'longUrl': 'www.facebook.com'
+        });
+        request.then(function(response) {
+          appendResults(response.result.shortUrl);
+        }, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
+      }
+
+      function init() {
+        gapi.client.setApiKey('AIzaSyC21HyuTljQ6Ouv2ARdZ4FNX7oIxniOI3o');
+        gapi.client.load('urlshortener', 'v1').then(makeRequest);
+      }
+
+      gapi.load('client', init);
+    </script>
+  </head>
+  <body>
+    <div id="results"></div>
+  </body>
+</html>
