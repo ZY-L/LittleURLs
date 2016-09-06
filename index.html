@@ -13,7 +13,7 @@
           'longUrl': 'www.facebook.com'
         });
         request.then(function(response) {
-          appendResults(response.result.shortUrl);
+          appendResults(response.result.id);
         }, function(reason) {
           console.log('Error: ' + reason.result.error.message);
         });
@@ -28,6 +28,7 @@
     </script>
   </head>
   <body>
-    <div id="results"></div>
+    
+	<div id="results"></div>
   </body>
 </html>
