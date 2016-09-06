@@ -3,9 +3,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script>
       function appendResults(text) {
-        var results = document.getElementById('results');
-        results.appendChild(document.createElement('P'));
-        results.appendChild(document.createTextNode(text));
+        var results = document.getElementById('results').innerHTML = text;
       }
 
       function makeLittle() {
@@ -30,6 +28,6 @@
   <body>
     URL: <input type="text" id="longurl" name="url" value="www.facebook.com" /> <br/>
     <input type="button" value="Create Little URL" onclick="makeLittle();" /> <br/> <br/>
-	<div id="results"></div>
+	<p id="results"></p>
   </body>
 </html>
