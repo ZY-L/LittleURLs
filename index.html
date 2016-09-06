@@ -2,11 +2,21 @@
   <head>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <input type="text" id="longurl" name="url" value="www.facebook.com" /> <br/>
-    <input type="button" value="Create a Little URL" onclick="makeLittle();" /> <br/> <br/>
 
-	<p id="results"></p>
+    <section class="content bgcolor">
+				<h2>Make me Little</h2>
+				<span class="input input--kyo">
+					<input class="input__field input__field--kyo" type="text" id="longurl" name="url"/>
+					<label class="input__label input__label--kyo" for="longurl">
+						<span class="input__label-content input__label-content--kyo">URL</span>
+					</label>
+				</span>
+        <input type="button" value="Create a Little URL" onclick="makeLittle();" />
+			</section>
+
+	  <p id="results"></p>
   </body>
 </html>
