@@ -8,9 +8,10 @@
         results.appendChild(document.createTextNode(text));
       }
 
-      function makeRequest() {
+      function makeLittle() {
+        var longUrl=document.getElementById("longurl").value;
         var request = gapi.client.urlshortener.url.insert({
-          'longUrl': 'www.facebook.com'
+          'longUrl': longUrl
         });
         request.then(function(response) {
           appendResults(response.result.id);
@@ -21,14 +22,16 @@
 
       function init() {
         gapi.client.setApiKey('AIzaSyC21HyuTljQ6Ouv2ARdZ4FNX7oIxniOI3o');
-        gapi.client.load('urlshortener', 'v1').then(makeRequest);
+        gapi.client.load('urlshortener', 'v1');
       }
-
       gapi.load('client', init);
     </script>
   </head>
   <body>
-    
+    .then(makeRequest)
+
+    URL: <input type="text" id="longurl" name="url" value="www.facebook.com" /> <br/>
+    <input type="button" value="Create Little URL" onclick="makeLittle();" /> <br/> <br/>
 	<div id="results"></div>
   </body>
 </html>
