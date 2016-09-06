@@ -43,12 +43,9 @@ p {
   padding: 5em 0 0 0;
   font-size: 0.65em; }
 
-.bgcolor {
-  background: #e8e8e8; }
-
 .input {
   position: relative;
-  z-index: 1;
+  z-index: auto;
   display: inline-block;
   margin: 1em;
   max-width: 350px;
@@ -56,15 +53,15 @@ p {
   vertical-align: top; }
 
 .input__field {
-  position: relative;
+  position: 50%;
   display: block;
   float: right;
-  padding: 0.8em;
-  width: 60%;
+  padding: 0.85em 1.5em;
+  width: 100%;
+  border-radius: 2em;
+  background: #fff;
+  color: #535d92;
   border: none;
-  border-radius: 0;
-  background: #f0f0f0;
-  color: #aaa;
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
@@ -73,47 +70,19 @@ p {
 .input__field:focus {
   outline: none; }
 
-.input__label {
+.button {
   display: inline-block;
   float: right;
-  padding: 0 1em;
   width: 40%;
   color: #6a7989;
   font-weight: bold;
   font-size: 70.25%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.input__label-content {
-  position: relative;
-  display: block;
-  padding: 1.6em 0;
-  width: 100%; }
-
-/* Kyo */
-.input--kyo {
-  z-index: auto; }
-
-.input__field--kyo {
-  padding: 0.85em 1.5em;
-  width: 100%;
-  border-radius: 2em;
-  background: #fff;
-  color: #535d92; }
-
-.input__label--kyo {
   z-index: 0;
   padding: 0 0 0 2em;
   width: 100%;
   text-align: left; }
 
-.input__label--kyo::after {
+.input__label::after {
   content: '';
   position: fixed;
   top: 0;
@@ -127,15 +96,12 @@ p {
   transition: opacity 0.3s;
   pointer-events: none; }
 
-.input__label-content--kyo {
-  padding: 0.5em 0; }
-
-.input__field--kyo:focus,
-.input__field--kyo:focus + .input__label--kyo .input__label-content--kyo {
+.input__field:focus,
+.input__field:focus + .button {
   z-index: 10000; }
 
-.input__field--kyo:focus + .input__label--kyo {
+.input__field:focus + .button {
   color: #fff; }
 
-.input__field--kyo:focus + .input__label--kyo::after {
+.input__field:focus + .button::after {
   opacity: 1; }
