@@ -19,7 +19,7 @@ a {
 	text-decoration: none;
 	outline: none;
 }
-    &:hover, &:focus {
+    a:hover, a:focus {
 	color: $primary-color;
 }
 
