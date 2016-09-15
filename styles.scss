@@ -1,8 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
-
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
-.clearfix:before, .clearfix:after { content: ''; display: table; }
-.clearfix:after { clear: both; }
+@import 'https://fonts.googleapis.com/css?family=Comfortaa';
 
 $primary-color: #404d5b;
 
@@ -11,22 +7,7 @@ body {
 	color: $primary-color;
 	font-weight: 500;
 	font-size: 1.05em;
-	font-family: 'Raleway', Arial, sans-serif;
-}
-
-a {
-	color: #2fa0ec;
-	text-decoration: none;
-	outline: none;
-}
-    a:hover, a:focus {
-	color: $primary-color;
-}
-
-.container {
-	margin: 0 auto;
-	text-align: center;
-	overflow: hidden;
+	font-family: 'Comfortaa', Arial, sans-serif;
 }
 
 .content {
@@ -35,7 +16,8 @@ a {
 }
     h2 {
 	margin: 0 0 2em;
-	opacity: 0.1;
+	opacity: 1;
+	text-align: center;
 }   
     p {
 	margin: 1em 0;
@@ -44,73 +26,39 @@ a {
 }
 
 .input {
-	position: relative;
-	z-index: auto;
-	display: inline-block;
-	margin: 1em;
-	max-width: 350px;
-	width: calc(100% - 2em);
-	vertical-align: top;
+	text-align: center;
+    z-index: auto;
+    display: inline-block;
+    margin: 1em;
+    width: calc(100% - 2em);
 }
 
 .input__field {
-	position: abs($number: 50%);
-	display: block;
-	float: right;
     padding: 0.85em 1.5em;
-	width: 100%;
+	width: 80%;
 	border-radius: 2em;
 	background: #fff;
 	color: #535d92;
 	border: none;
 	font-weight: bold;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
-}
-
-.input__field:focus {
-	outline: none;
 }
 
 .button {
-	display: inline-block;
-	float: right;
-	width: 40%;
-	color: #6a7989;
-	font-weight: bold;
-	font-size: 70.25%;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 70.25%;
     z-index: 0;
-	padding: 0 0 0 2em;
-	width: 100%;
-	text-align: left;
-
-}
-
-
-.input__label::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	width: 100%;
-	height: 100%;
-	background: rgba(11, 43, 205, 0.6);
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	pointer-events: none;
-}
-
-.input__field:focus,
-.input__field:focus +  .button {
-	z-index: 10000;
-}
-
-.input__field:focus + .button {
-	color: #fff;
-}
-
-.input__field:focus + .button::after {
-	opacity: 1;
+    padding: 0 0 0 2em;
+    width: 100%;
+    text-align: left;
+    margin-top: 1em;
+    padding: 1em 1.5em;
+    width: 60%;
+    text-align: center;
+    border-radius: 3em;
+    border: none;
+    font-weight: bold;
+    font-size: large;
 }
