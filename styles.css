@@ -1,4 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Comfortaa';
+*:focus {
+  outline: none; }
+
 body {
   background: #f9f7f6;
   color: #404d5b;
@@ -34,6 +37,7 @@ p {
   background: #fff;
   color: #535d92;
   border: none;
+  text-align: center;
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -54,3 +58,7 @@ p {
   border: none;
   font-weight: bold;
   font-size: large; }
+
+.button:focus {
+  background: #404d5b;
+  color: #ddd; }

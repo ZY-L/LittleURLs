@@ -2,6 +2,10 @@
 
 $primary-color: #404d5b;
 
+*:focus {
+    outline: none;
+}
+
 body {
 	background: #f9f7f6;
 	color: $primary-color;
@@ -40,6 +44,7 @@ body {
 	background: #fff;
 	color: #535d92;
 	border: none;
+	text-align: center;
 	font-weight: bold;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -61,4 +66,9 @@ body {
     border: none;
     font-weight: bold;
     font-size: large;
+}
+
+.button:focus{
+	background: $primary-color;
+	color: #ddd;
 }
